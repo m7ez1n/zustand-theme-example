@@ -2,12 +2,12 @@ import create from "zustand";
 
 type ThemeHookProps = {
   selectedTheme: "dark" | "light";
-  setSelectedTheme: () => void;
+  toggleTheme: () => void;
 };
 
 const useTheme = create<ThemeHookProps>((set) => ({
   selectedTheme: "dark",
-  setSelectedTheme: () =>
+  toggleTheme: () =>
     set(({ selectedTheme }) => ({
       selectedTheme: selectedTheme === "light" ? "dark" : "light",
     })),

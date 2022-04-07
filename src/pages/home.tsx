@@ -18,13 +18,13 @@ export const Wrapper = styled.div`
 `;
 
 const Home = () => {
-  const setSelectedTheme = useTheme((state) => state.setSelectedTheme);
+  const toggleTheme = useTheme((state) => state.toggleTheme);
   const selectedTheme = useTheme((state) => state.selectedTheme);
 
   return (
     <Container>
       <Wrapper>
-        <Button onClick={setSelectedTheme}>
+        <Button onClick={toggleTheme}>
           {selectedTheme === "dark" ? <BsMoon /> : <FaRegLightbulb />}
         </Button>
 
